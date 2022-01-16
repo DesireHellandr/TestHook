@@ -13,4 +13,6 @@ jobs:
       uses: DesireHellandr/TestHook@main
       with:
         webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}
+        censor_username: false
+        hide_links: false
 #Test
