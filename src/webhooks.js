@@ -89,7 +89,7 @@ module.exports.getChangeLog = (payload, hideLinks, censorUsername) => {
       commit.message.length > MAX_MESSAGE_LENGTH
         ? commit.message.substring(0, MAX_MESSAGE_LENGTH) + "..."
         : commit.message;
-    changelog += `\`${message}\` \n  _**by @${username}**_\n'`;
+    changelog += `\`${message}\` \n '' \n _**by @${username}**_\n`;
   }
 
   return changelog;
