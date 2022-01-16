@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 const core = require("@actions/core");
-const MAX_MESSAGE_LENGTH = 128;
+const MAX_MESSAGE_LENGTH = 500;
 
 module.exports.send = (
   webhookUrl,
