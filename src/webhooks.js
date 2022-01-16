@@ -25,11 +25,11 @@ module.exports.send = (
   core.info("Constructing Embed...");
 
   let latest = commits[0];
-  const count = size == 1 ? "Коммит" : " Коммитов(а)";
+  const count = size == 1 ? "коммит" : " коммитов(а)";
 
   let embed = new discord.MessageEmbed()
     .setColor(color)
-    .setTitle(`Количество: ${size} ${count}\nНазвание репозитория: \`${repository}\`\nВетка: \`${branch}\``)
+    .setTitle(`Название репозитория: \`${repository}\`\nВетка: \`${branch}\``)
     .setDescription(this.getChangeLog(payload, hideLinks, censorUsername))
     .setTimestamp(Date.parse(latest.timestamp));
 
