@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Run Discord Webhook
-      uses: johnnyhuy/actions-discord-git-webhook@main
+      uses: DesireHellandr/TestHook@main
       with:
         webhook_url: ${{ secrets.YOUR_DISCORD_WEBHOOK_URL }}
 #Test
