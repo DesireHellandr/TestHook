@@ -29,7 +29,7 @@ module.exports.send = (
 
   let embed = new discord.MessageEmbed()
     .setColor(color)
-    .setTitle(`⚡ ${size} ${count}\n📁\`${repository}\`\n🌳 \`${branch}\``)
+    .setTitle(`Количество: ${size} ${count}\nНазвание репозитория: \`${repository}\`\nВетка: \`${branch}\``)
     .setDescription(this.getChangeLog(payload, hideLinks, censorUsername))
     .setTimestamp(Date.parse(latest.timestamp));
 
@@ -94,7 +94,7 @@ module.exports.getChangeLog = (payload, hideLinks, censorUsername) => {
         ? commit.message.substring(0, MAX_MESSAGE_LENGTH) + "..."
         : commit.message;
     changelog += !hideLinks
-      ? `[\`${sha}\`](${commit.url}) ${message} by _@${username}_\n`
+      ? `[\`${sha}\`](${message} by _@${username}_\n`
       : `\`${sha}\` ${message}  by _@${username}_\n`;
   }
 
